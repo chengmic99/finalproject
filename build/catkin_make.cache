@@ -1,0 +1,2 @@
+finalproject:hark_msgs
+-DCATKIN_DEVEL_PREFIX=/home/users/fri/mahathi_ws/devel -DCMAKE_INSTALL_PREFIX=/home/users/fri/mahathi_ws/install -G Unix Makefiles

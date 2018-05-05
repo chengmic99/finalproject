@@ -1,0 +1,8 @@
+prefix=/home/users/fri/mahathi_ws/install
+
+Name: finalproject
+Description: Description of finalproject
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/users/fri/mahathi_ws/install/lib 
+Requires: 
