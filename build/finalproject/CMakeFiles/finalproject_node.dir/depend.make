@@ -97,8 +97,6 @@ finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/ros/kinetic/include/tf2_ros/buffer_interface.h
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
-finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/ros/kinetic/stacks/include/hark_msgs/HarkSource.h
-finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /opt/ros/kinetic/stacks/include/hark_msgs/HarkSourceVal.h
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /usr/include/eigen3/Eigen/Core
 finalproject/CMakeFiles/finalproject_node.dir/src/finalproject_node.cpp.o: /usr/include/eigen3/Eigen/Geometry
