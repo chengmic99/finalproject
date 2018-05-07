@@ -7,12 +7,15 @@
 
 ros::Publisher robot_move;
 double goalAngleDeg;
+double canMove;
+
 void harkCallback(const hark_msgs::HarkSource::ConstPtr& message){
-	//ROS_INFO("receiving messages from Harksource topic");
 	for (int i = 0; i < message->src.size(); i++){
 		goalAngleDeg = message->src[i].azimuth;
+		
+		
 	}
-	if (goalAngleDeg > 0){
+
 		
 	ros::Time turn = ros::Time::now();
 	ros::Rate rate(1000);
@@ -23,29 +26,28 @@ void harkCallback(const hark_msgs::HarkSource::ConstPtr& message){
 	move.angular.y = 0;
 	move.angular.z = 0;
 
-	double current_angle = -180 *M_PI/180;
-	//double goal_angle = (270*M_PI/180);
+	double current_angle = 0;
 	double goal_angle = ((goalAngleDeg) *M_PI/180);
 	move.angular.z = 0.3;
 	double orig_time = ros::Time::now().toSec();
 
-	ROS_INFO_STREAM(goal_angle);
-		ROS_INFO_STREAM(current_angle);
-
+	
 
 	while(ros::ok() && (current_angle < goal_angle)){
-		double current_time = ros::Time::now().toSec();
-		current_angle = (0.3)*(current_time-orig_time);
-		
-		ROS_INFO_STREAM(goal_angle);
+
 		ROS_INFO_STREAM(current_angle);
+
+		double current_time = ros::Time::now().toSec();
+		current_angle += (0.3)*(current_time-orig_time);
+		orig_time = current_time;
 		robot_move.publish(move);
 		ros::spinOnce();
 		rate.sleep();
 	}
 	move.angular.z = 0;
 	robot_move.publish(move);
-	}
+	
+	
 }
 int main(int argc, char **argv){
 	ros::init(argc, argv, "finalproject_node");
